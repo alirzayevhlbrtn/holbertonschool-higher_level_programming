@@ -14,4 +14,6 @@ def list_division(my_list_1, my_list_2, list_length):
             nl.append(0)
             print("out of range")
             break
+        finally:
+            continue
     return nl
