@@ -8,14 +8,16 @@ class Square:
     """
     Class Square with private attribute size
     """
-    def __init__(self, size=0) -> None:
+    def __init__(self, size=0, position=(0, 0))  -> None:
         """
         __init__ method that sets the size of the square
 
         Args:
             size (int): size of square
+            position (int): position of square
         """
-        self.__size = size
+        self.size = size
+        self.position = position
         if not isinstance(self.__size, int):
             raise TypeError("size must be an integer")
         elif self.__size < 0:
@@ -33,7 +35,7 @@ class Square:
     def size(self, value):
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
-        elif self.__size < 0:
+        elif value < 0:
             raise ValueError("size must be >= 0")
         else:
             self.__size = value
@@ -59,8 +61,12 @@ class Square:
         prints square with #
         """
         if self.__size != 0:
-            for i in range(self.__size):
-                for j in range(self.__size):
+            for i in range(self.position[1]):
+                print()
+            for j in range(self.size):
+                for k in range(self.position[0]):
+                    print(" ", end="")
+                for l in range(self.size):
                     print("#", end="")
                 print()
         else:
