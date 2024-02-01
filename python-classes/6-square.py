@@ -8,7 +8,7 @@ class Square:
     """
     Class Square with private attribute size
     """
-    def __init__(self, size=0, position=(0, 0))  -> None:
+    def __init__(self, size=0, position=(0, 0)) -> None:
         """
         __init__ method that sets the size of the square
 
@@ -66,7 +66,7 @@ class Square:
             for j in range(self.size):
                 for k in range(self.position[0]):
                     print(" ", end="")
-                for l in range(self.size):
+                for p in range(self.size):
                     print("#", end="")
                 print()
         else:
