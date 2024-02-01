@@ -2,6 +2,8 @@
 """
 Defining a class Square
 """
+
+
 class Square:
     """
     First class(empty) created for Holberton School
