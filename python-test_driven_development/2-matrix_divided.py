@@ -36,4 +36,4 @@ def matrix_divided(matrix, div):
             nr.append(round(n / div, 2))
         res.append(nr)
 
-    return result
+    return res
