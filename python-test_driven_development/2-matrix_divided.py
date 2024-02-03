@@ -1,19 +1,13 @@
 #!/usr/bin/python3
 """
-Divide matrix to divider
+Divide all elements of a matrix
 """
 
 
 def matrix_divided(matrix, div):
     """
-    Function of divide process
+    Documention of function
     """
-    if not isinstance(div, (int, float)):
-        raise TypeError("div must be a number")
-
-    if div == 0:
-        raise ZeroDivisionError("division by zero")
-
     if not isinstance(matrix, list):
         raise TypeError("matrix must be a matrix (list of lists) of "
                         "integers/floats")
@@ -26,14 +20,20 @@ def matrix_divided(matrix, div):
         raise TypeError("matrix must be a matrix (list of lists) of "
                         "integers/floats")
 
+    if not isinstance(div, (int, float)):
+        raise TypeError("div must be a number")
+
+    if div == 0:
+        raise ZeroDivisionError("division by zero")
+
     if len(set(len(row) for row in matrix)) > 1:
         raise TypeError("Each row of the matrix must have the same size")
 
-    res = []
-    for r in matrix:
-        nr = []
-        for n in r:
-            nr.append(round(n / div, 2))
-        res.append(nr)
+    result = []
+    for row in matrix:
+        new_row = []
+        for elem in row:
+            new_row.append(round(elem / div, 2))
+        result.append(new_row)
 
-    return res
+    return result
