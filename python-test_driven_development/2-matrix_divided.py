@@ -32,7 +32,7 @@ def matrix_divided(matrix, div):
     res = []
     for r in matrix:
         nr = []
-        for n in row:
+        for n in r:
             nr.append(round(n / div, 2))
         res.append(nr)
 
