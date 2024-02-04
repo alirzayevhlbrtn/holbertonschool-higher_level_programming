@@ -1,31 +1,34 @@
 #!/usr/bin/python3
+
 """
-Menasiz xetalar toplusu v2
+I love text indentation
 """
 
 
 def text_indentation(text):
     """
-    Function of print
+    Print a text indentation
     """
 
     if not isinstance(text, str):
         raise TypeError("text must be a string")
 
-    banned = [".", "?", ":"]
-
-    for i in range(len(text)):
-        if text[i] in banned:
+    for i in range(0, len(text)):
+        if text[i] in [".", "?", ":"]:
             print(text[i], end="")
-            print()
+            print("\n")
         elif text[i] == " ":
-            for j in (i, 0, -1):
+            for j in range(i, 0, -1):
                 if text[j] == " ":
                     continue
-                elif text[j] in banned:
+                elif text[j] in [".", "?", ":"]:
                     break
                 else:
                     print(text[i], end="")
                     break
         else:
             print(text[i], end="")
+
+
+if __name__ == "__main__":
+    text_indentation("Holberton School")
