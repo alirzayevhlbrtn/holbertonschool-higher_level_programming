@@ -22,7 +22,7 @@ def text_indentation(text):
             for j in (i, 0, -1):
                 if text[j] == " ":
                     continue
-                elif text[j] in bannedd:
+                elif text[j] in banned:
                     break
                 else:
                     print(text[i], end="")
