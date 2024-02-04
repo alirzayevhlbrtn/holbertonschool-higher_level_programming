@@ -1,0 +1,23 @@
+===================
+5. Text indentation
+===================
+
+
+Import:
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+
+Test cases normal:
+>>> text_indentation("Hello?")
+Hello?
+<BLANKLINE>
+
+
+Test cases exceptions:
+>>> text_indentation(31)
+Traceback (most recent call last):
+TypeError: text must be a string
+
+>>> text_indentation()
+Traceback (most recent call last):
+TypeError: text_indentation() missing 1 required positional argument: 'text'
