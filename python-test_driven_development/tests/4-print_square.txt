@@ -15,7 +15,7 @@ Test cases with expected output:
 ###
 
 
->>> print_square(10)
+>>> print_square(5)
 #####
 #####
 #####
