@@ -43,6 +43,20 @@ Test cases normal:
 [-1, -4, -2, -5, -3]
 
 
+>>> my_list2 = MyList([])
+>>> print(my_list2)
+[]
+>>> my_list2.print_sorted()
+[]
+
+
+>>> my_list3 = MyList()
+>>> print(my_list3)
+[]
+>>> my_list3.print_sorted()
+[]
+
+
 Test cases exceptions:
 ======================
 >>> my_list = MyList(None)
