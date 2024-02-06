@@ -5,7 +5,7 @@
 
 Import:
 =======
-MyList = __import__('1-my_list').MyList
+>>> MyList = __import__('1-my_list').MyList
 
 
 Test cases normal:
@@ -17,6 +17,22 @@ Test cases normal:
 [1, 2, 3, 4, 5]
 >>> print(my_list)
 [1, 4, 2, 5, 3]
+>>> my_list[4] = 31
+>>> print(my_list)
+[1, 4, 2, 5, 31]
+>>> my_list.print_sorted()
+[1, 2, 4, 5, 31]
+>>> my_list.remove(31)
+>>> print(my_list)
+[1, 4, 2, 5]
+>>> my_list.print_sorted()
+[1, 2, 4, 5]
+>>> my_list.append(72)
+>>> print(my_list)
+[1, 4, 2, 5, 72]
+>>> my_list.print_sorted()
+[1, 2, 4, 5, 72]
+
 
 >>> my_list1 = MyList([-1, -4, -2, -5, -3])
 >>> print(my_list1)
