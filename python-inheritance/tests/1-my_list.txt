@@ -1,0 +1,48 @@
+=======================
+1. Mylist with function
+=======================
+
+
+Import:
+=======
+MyList = __import__('1-my_list').MyList
+
+
+Test cases normal:
+==================
+>>> my_list = MyList([1, 4, 2, 5, 3])
+>>> print(my_list)
+[1, 4, 2, 5, 3]
+>>> my_list.print_sorted()
+[1, 2, 3, 4, 5]
+>>> print(my_list)
+[1, 4, 2, 5, 3]
+
+>>> my_list1 = MyList([-1, -4, -2, -5, -3])
+>>> print(my_list1)
+[-1, -4, -2, -5, -3]
+>>> my_list1.print_sorted()
+[-5, -4, -3, -2, -1]
+>>> print(my_list1)
+[-1, -4, -2, -5, -3]
+
+
+Test cases exceptions:
+======================
+>>> my_list = MyList(None)
+Traceback (most recent call last):
+TypeError: 'NoneType' object is not iterable
+
+>>> my_list = MyList([1, 2, 3], [4, 5, 6])
+Traceback (most recent call last):
+TypeError: list expected at most 1 argument, got 2
+
+>>> my_list = MyList([1, "Betty", "Holberton", 5])
+>>> my_list.print_sorted()
+Traceback (most recent call last):
+TypeError: '<' not supported between instances of 'str' and 'int'
+
+>>> my_list = (1, 2)
+>>> my_list.print_sorted()
+Traceback (most recent call last):
+AttributeError: 'tuple' object has no attribute 'print_sorted'
