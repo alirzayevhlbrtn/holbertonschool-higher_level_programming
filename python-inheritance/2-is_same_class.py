@@ -5,4 +5,7 @@ Exact same object
 
 
 def is_same_class(obj, a_class):
+    """
+    Function of checker
+    """
     return type(obj) is a_class
