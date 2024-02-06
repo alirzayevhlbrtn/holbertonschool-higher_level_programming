@@ -10,5 +10,5 @@ class MyList(list):
     """
 
     def print_sorted(self):
-        n_list = self[:]
-        print(n_list.sort())
+        n_list = self[:].sort()
+        print(n_list)
