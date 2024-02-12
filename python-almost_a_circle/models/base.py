@@ -2,6 +2,7 @@
 """
 Base class
 """
+import json
 
 
 class Base:
