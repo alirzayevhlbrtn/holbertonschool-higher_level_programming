@@ -91,6 +91,6 @@ class Rectangle(Base):
         """
         modified __str__
         """
-        return return "[Rectangle] ({}) {}/{} - {}/{}".format(
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(
             self.id, self.__x, self.__y, self.__width, self.__height
         )
