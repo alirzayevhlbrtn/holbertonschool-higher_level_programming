@@ -75,7 +75,7 @@ class Base:
                 ls = cls.from_json_string(json_string)
                 inst = []
                 for i in ls:
-                    ins = cls.create(**d)
+                    ins = cls.create(**i)
                     inst.append(ins)
                 return inst
         except IOError:
