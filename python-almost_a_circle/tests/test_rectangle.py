@@ -13,7 +13,7 @@ class TestRectangle(unittest.TestCase):
     def test_rectangle(self):
         r1 = Rectangle(1, 2)
         self.assertEqual(r1.width, 1)
-        self.assertEqual(r2.height, 2)
+        self.assertEqual(r1.height, 2)
         rbig = Rectangle(1, 2, 31, 4, 5)
         self.assertEqual(rbig.width, 1)
         self.assertEqual(rbig.height, 2)
@@ -82,7 +82,7 @@ class TestRectangle(unittest.TestCase):
         ans = "\n #####\n #####\n #####\n #####\n"
         with patch("sys.stdout", new=StringIO()) as str_out:
             r1.display()
-            self.assertEqual(str_out.getvalue(), res)
+            self.assertEqual(str_out.getvalue(), ans)
 
     def test_disp4(self):
         r1 = Rectangle(3, 2)
