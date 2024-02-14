@@ -27,6 +27,44 @@ class Base:
             return "[]"
         return json.dumps(list_dictionaries)
 
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        screen = turtle.Screen()
+        screen.title("Rectangles and Squares")
+
+        t = turtle.Turtle()
+
+        def draw_rectangle(x, y, width, height):
+            t.penup()
+            t.goto(x, y)
+            t.pendown()
+            for _ in range(2):
+                t.forward(width)
+                t.right(90)
+                t.forward(height)
+                t.right(90)
+
+        def draw_square(x, y, side_length):
+            t.penup()
+            t.goto(x, y)
+            t.pendown()
+            for _ in range(4):
+                t.forward(side_length)
+                t.right(90)
+
+        for rectangle in list_rectangles:
+            draw_rectangle(
+                rectangle.x,
+                rectangle.y,
+                rectangle.width,
+                rectangle.height,
+            )
+
+        for square in list_squares:
+            draw_square(square.x, square.y, square.size)
+
+        turtle.mainloop()
+
     @classmethod
     def save_to_file(cls, list_objs):
         """
