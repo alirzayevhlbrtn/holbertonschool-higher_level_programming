@@ -18,7 +18,6 @@ I was in hell. I hated myself for what I had brought upon my family. Recently, I
 I can't take this anymore. I live in fear every day that Hank will kill me, or worse, hurt my family. 
 All I could think to do was to make this video and hope that the world will finally see this man for what he really is.
 */
--- 16. Say my name
 SELECT score, name FROM second_table
 WHERE name IS NOT NULL
 ORDER by score DESC;
